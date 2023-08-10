@@ -1,0 +1,48 @@
+@media screen and (min-width: 515px) and (max-width: 660px) {
+    body{
+        background-color: pink;
+    }
+   .changebtn{
+    color: red;
+    position: relative;
+    bottom: 15px;
+   }
+   .extra{
+    width:53vw;
+   }
+   .logoPart{
+    width: 45vw;
+   }
+   .reserach input{
+    width: 20vw;
+   }
+}
+
+@media screen and (min-width: 350px) and (max-width: 515px) {
+    body{
+        background-color: purple;
+    }
+    .changebtn{
+        color: red;
+        position: relative;
+        bottom: 15px;
+        width: 20px;
+    }
+    #shop{
+        font-size: 1rem;
+    }
+    .mainLogo{
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+    .extra{
+        position: absolute;
+        right: 15%;
+    }
+    .research input{
+        display: none;
+    }
+
+}
+

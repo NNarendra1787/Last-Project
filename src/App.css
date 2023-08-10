@@ -1,0 +1,129 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Navbar css are herar */
+
+ *{
+  box-sizing: border-box;
+ }
+.MainNav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+#shop{
+  color: red;
+  font-size: 1.5rem; 
+}
+.links{
+  font-weight: bold;
+  /* font-size: 1.6rem; */
+}
+.Navigation{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+  width: 40vw;
+  margin: 0px auto;
+}
+.mainLogo{
+  display: block;
+  height: 50px;
+  width: 70px;
+}
+.logoPart{
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+}
+.midNav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 96vw;
+  background-color: mediumslateblue;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.user{
+  padding: 0px 50px;
+}
+#user{
+  padding: 1px 30px;
+  border-radius: 22px;
+}
+.cart{
+  width: 30px;
+  height: 30px;
+}
+
+.extra{
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 10px;
+}
+
+.research{
+  display: flex;
+  align-items: center;
+  padding: 2px 3px;
+}
+
+.research input{
+  border-radius: 12px;
+  border: none;
+  width: 170px;
+  height: 20px;
+}
+
+.search{
+  height: 30px;
+  width: 30px;
+}
+.myButton{
+  background: none;
+  border: none;
+  position: relative;
+  right: 10px;
+}

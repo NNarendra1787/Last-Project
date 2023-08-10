@@ -1,0 +1,146 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* Laptop */
+.DropLap{
+    background-color: #fff;
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid red;
+    position: absolute;
+    top: 92px;
+    box-sizing: border-box;
+    right: 38%;
+    list-style: none;
+    z-index: 2;
+    /* left: 484px; */
+}
+.DropLap::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    transform: rotate(450deg);
+    top: 5%;
+    left: -30%;
+    z-index: 2;
+    /* background-color: pink; */
+}
+li{
+    text-align: center;
+    list-style: none;
+}
+
+/* Accesseries */
+.DropAss{
+    background-color: #fff;
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid red;
+    position: absolute;
+    box-sizing: border-box;
+    top: 92px;
+    right: 30%;
+    list-style: none;
+    z-index: 2;
+}
+.DropAss::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    transform: rotate(450deg);
+    top: 5%;
+    left: -30%;
+    z-index: 2;
+    /* background-color: pink; */
+}
+
+/* Drop IPad */
+.DropPad{
+    background-color: #fff;
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid red;
+    position: absolute;
+    box-sizing: border-box;
+    top: 92px;
+    right: 45%;
+    list-style: none;   
+    z-index: 2;
+}
+.DropPad::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    transform: rotate(450deg);
+    top: 5%;
+    left: -30%;
+    z-index: 2;
+    /* background-color: pink; */
+}
+
+/* Drop-phone */
+.DropPh{
+    background-color: #fff;
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid red;
+    position: absolute;
+    box-sizing: border-box;
+    top: 92px;
+    left: 42%;
+    list-style: none; 
+    z-index: 2;
+}
+.DropPh::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    transform: rotate(450deg);
+    top: 5%;
+    left: -30%;
+    z-index: 2;
+}
+
+/* DropStore */
+.DropStore{
+    background-color: #fff;
+    width: 90px;
+    border-radius: 8px;
+    border: 1px solid red;
+    position: absolute;
+    box-sizing: border-box;
+    top: 92px;
+    left: 34%;
+    list-style: none; 
+    z-index: 2;
+}
+.DropStore::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 25px;
+    transform: rotate(450deg);
+    top: 5%;
+    left: -30%;
+    z-index: 2;
+}
+
+/* Login and register */
+.logRegi{
+    position: absolute;
+    width: 80px;
+    top: 41px;
+    right: 2%;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid red;
+    box-sizing: border-box;
+    height: 100px;
+    z-index: 2;
+}

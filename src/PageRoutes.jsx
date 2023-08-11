@@ -8,6 +8,7 @@ import Macbook from './Router/Macbook'
 import Accesseries from './Router/Accesseries'
 import LoginData from './Router/LoginData'
 import Register from './Router/Register'
+import ClickPage from './DataComp/ClickPage'
 
 function PageRoutes() {
   return (
@@ -22,6 +23,7 @@ function PageRoutes() {
 
         <Route path="/register" element={<Register />} />
       <Route path="/login" element={<LoginData/>} />
+      <Route  path='/ClickPage/:id' element={<ClickPage />}/>
         
     </Routes>
         

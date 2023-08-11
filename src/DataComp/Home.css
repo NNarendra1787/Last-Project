@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Fira+Sans&family=Lora&family=Manrope&family=Source+Code+Pro:wght@300&family=Tinos:ital@1&display=swap');
+.homeData{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 3px solid purple; */
+    margin: 0px auto;
+    width: 75vw;
+    font-family: 'Tinos', serif;
+    gap: 1.5rem;
+}
+.homeTitle{
+    color: red;
+    font-family: 'Tinos', serif;
+}
+.myline{
+    background-color: rebeccapurple;
+}
+.homeBox{
+    /* border: 1px solid red; */
+    width: 250px;
+    height: 350px;
+    border-radius: 12px;
+    /* padding: 3px 12px; */
+    box-shadow: 6px 7px 6px 3px gray;
+    box-sizing: border-box;
+}
+.homeimg{
+    height: 130px;
+    width: 150px;
+}
+.homeimg:hover{
+    transform: rotateY(180deg);
+}
+.homeText{
+    font-size: 1.3rem;
+}
+.notPrice{
+    color: dimgray;
+    text-decoration: line-through;
+}
+.midCard{
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+.itsPrice{
+    color: #F44336;
+    font-size: 21px;
+}
+.checked {
+    color: orange;
+    font-size: 20px;
+  }
+  .HoHome{
+    position: relative;
+    bottom: 100px;
+  }
+
+  .HVid{
+    height: 400px;
+    width: 80vw;
+  }
+  .ClickPage{
+    display: flex;
+    justify-content: space-around;
+    width: 80vh;
+    height: 100vh;
+    margin: 0px auto;
+  }

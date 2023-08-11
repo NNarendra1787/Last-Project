@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import Register from "./Register";
-import LoginData from "./LoginData";
+import { Link, Routes } from "react-router-dom";
+// import Register from "./Register";
+// import LoginData from "./LoginData";
 import '../Extra/DropDown.css'
 
 function Special() {

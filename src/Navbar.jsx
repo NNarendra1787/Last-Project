@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import mainLogo from "./Img/myImplogo.png";
 import cart from "./Img/cart.png";
-import search from "./Img/search.png";
+// import search from "./Img/search.png";
 import Special from "./Router/Special";
 import Userlogo from "./Img/profile_icon.svg";
 import SearchIcon from "./Img/search_icon.svg";
@@ -13,7 +13,7 @@ function Navbar() {
 
   const [logregi, setLogRegi] = useState(false);
 
-  const navi = useNavigate();
+  // const navi = useNavigate();
 
   const infomation = localStorage.getItem("name");
   // console.log("name aaya",infomation);
@@ -47,7 +47,7 @@ function Navbar() {
                 setLogRegi((prev) => !prev);
               }}
             >
-              {infomation != <img src={Userlogo} alt="/" />
+              {infomation !== <img src={Userlogo} alt="/" />
                 ? `Hi ${infomation}`
                 : "Hi User"}
             </button>

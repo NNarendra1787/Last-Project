@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
 import axios from "axios";
-import backImage from "../Img/cyber-security-gee883c390_1280.jpg"
+// import backImage from "../Img/cyber-security-gee883c390_1280.jpg"
 
 function Register() {
   const [data, setData] = useState({

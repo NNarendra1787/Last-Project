@@ -11,7 +11,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  autoPlay: true,
   autoplaySpeed: 6000,
   nextArrow: (
     <div>
@@ -30,15 +30,16 @@ function Coursole() {
   const [nav2, setNav2] = useState(null);
 
   const [slider1, setSlider1] = useState(null)
-  const [slider2, setSlider2] = useState(null)
+  const [slider2] = useState(null)
 
   useEffect(()=>{
     setNav1(slider1);
     setNav2(slider2)
-  },)
+  },[slider1, slider2])
 
   return (
     <>
+    {console.log(nav1)}
       <div className="content">
       <h2 className="header">Grand Sale of the Day</h2>
       <div className="container">

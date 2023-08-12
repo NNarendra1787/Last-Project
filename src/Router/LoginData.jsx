@@ -16,7 +16,7 @@ function LoginData() {
     
         try {
           const response = await axiso.post(
-            "http://localhost:5000/api/user/login",
+            "https://masterproject.onrender.com/api/user/login",
             { email, password }
           );
     

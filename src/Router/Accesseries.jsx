@@ -1,12 +1,7 @@
-import React from 'react'
-import Navbar2 from '../Navbar2'
+import React from "react";
 
 function Accesseries() {
-  return (
-    <div>Accesseries
-      <Navbar2 />
-    </div>
-  )
+  return <div>Accesseries</div>;
 }
 
-export default Accesseries
+export default Accesseries;

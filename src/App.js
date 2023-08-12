@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import {} from 'bootstrap'
 // import { useState } from 'react';
 import PageRoutes from './PageRoutes';
+// import BackUp from './BackUp';
 
 function App() {
   // const [openProfile, setOpenProfile] = useState(false)
@@ -17,6 +18,7 @@ function App() {
 
       <Navbar />
       <PageRoutes />
+      {/* <BackUp /> */}
 
       {/* <Sample /> */}
       {/* <Coursole /> */}

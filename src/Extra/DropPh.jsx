@@ -7,11 +7,9 @@ function DropPh() {
     <>
         <div className='DropPh'>
         <ul>
-          <li><Link to='/vivo' >Vivo</Link></li>
-          <li><Link to='/Redmi' >Redmi</Link></li>
-          <li><Link to='/onepluse' >OnePlus</Link></li>
-          <li><Link to='/samsung' >Samsung</Link></li>
-          <li><Link to='/iphone' >Iphone</Link></li>
+          <li><Link to='/Vivo' className='ph'>Vivo</Link></li>
+          <li><Link to='/Redmi' className='ph'>Redmi</Link></li>
+          <li><Link to='/Oneplus' className='ph'>OnePlus</Link></li>
         </ul>
       </div>
     </>

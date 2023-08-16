@@ -11,7 +11,7 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoPlay: true,
+  autoplay: true,
   autoplaySpeed: 6000,
   nextArrow: (
     <div>

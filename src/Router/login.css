@@ -5,7 +5,7 @@
     top: 0px;
     left: 0px;
     z-index: -1;
-    height: 100vh;
+    height: 128vh;
     width: 100%;
   }
  #midparts::before{
@@ -15,7 +15,7 @@
     top: 0px;
     left: 0px;
     z-index: -1;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     border-radius: 10px;
   }
@@ -78,7 +78,7 @@
   
   #midpart{
     width: 320px;
-    height: 400px;
+    height: 370px;
     background-color: lemonchiffon;
     border: 2px solid violet;
     display: flex;
@@ -106,7 +106,7 @@
     color: blue;
   }
   input{
-    padding: 10px;
+    padding: 4px;
     margin: 4px 15px;
     color: mediumpurple;
     border-radius: 10px;

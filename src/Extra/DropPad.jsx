@@ -8,19 +8,13 @@ function DropPad() {
       <div className="DropPad">
         <ul>
           <li>
-            <Link to="/vivo">Vivo</Link>
+            <Link to="/VivoP">Vivo</Link>
           </li>
           <li>
-            <Link to="/Redmi">Redmi</Link>
+            <Link to="/RedmiP">Redmi</Link>
           </li>
           <li>
-            <Link to="/onepluse">OnePlus</Link>
-          </li>
-          <li>
-            <Link to="/samsung">Samsung</Link>
-          </li>
-          <li>
-            <Link to="/iphone">Iphone</Link>
+            <Link to="/OnepluseP">OnePlus</Link>
           </li>
         </ul>
       </div>

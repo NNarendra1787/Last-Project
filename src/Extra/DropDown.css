@@ -10,9 +10,9 @@
     border-radius: 8px;
     border: 1px solid red;
     position: absolute;
-    top: 92px;
+    top: 50px;
     box-sizing: border-box;
-    right: 38%;
+    right: 44%;
     list-style: none;
     z-index: 2;
     /* left: 484px; */
@@ -88,12 +88,13 @@ li{
     background-color: #fff;
     width: 90px;
     border-radius: 8px;
+    color: purple;
     border: 1px solid red;
     position: absolute;
     box-sizing: border-box;
-    top: 92px;
-    left: 42%;
-    list-style: none; 
+    top: 52px;
+    left: 21%;
+    list-style: none;
     z-index: 2;
 }
 .DropPh::before{
@@ -106,6 +107,9 @@ li{
     left: -30%;
     z-index: 2;
 }
+.ph{
+    color: purple;
+}
 
 /* DropStore */
 .DropStore{
@@ -115,8 +119,8 @@ li{
     border: 1px solid red;
     position: absolute;
     box-sizing: border-box;
-    top: 92px;
-    left: 34%;
+    top: 50px;
+    left: 1%;
     list-style: none; 
     z-index: 2;
 }

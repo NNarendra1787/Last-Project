@@ -5,6 +5,8 @@
     justify-content: space-around;
     width: 40vw;
     margin: 0px auto;
+    position: relative;
+    bottom: 13px;
   }
   .mainLogo{
     display: block;
@@ -21,8 +23,11 @@
     align-items: center;
     justify-content: space-between;
     height: 50px;
+    /* color: lemonchiffon; */
     width: 96vw;
-    background-color: mediumslateblue;
+    /* background-image: linear-gradient(to right, darkblue, skyblue); */
+    background-image: linear-gradient(to right,darkblue, mediumblue);
+    /* color: vo; */
     box-sizing: border-box;
     border-radius: 15px;
   }
@@ -36,6 +41,8 @@
   .cart{
     width: 30px;
     height: 30px;
+    position: relative;
+    right: 44%;
   }
   
   .extra{
@@ -49,12 +56,14 @@
     display: flex;
     align-items: center;
     padding: 2px 3px;
+    position: relative;
+    top: 10px;
   }
   
   .research input{
-    border-radius: 12px;
+    border-radius: 7px;
     border: none;
-    width: 170px;
+    width: 310px;
     height: 20px;
   }
   

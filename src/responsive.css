@@ -1,62 +1,62 @@
 @media screen and (min-width: 515px) and (max-width: 660px) {
-    body{
+    body {
         background-color: pink;
     }
-   .changebtn{
-    color: red;
-    position: relative;
-    bottom: 15px;
-   }
-   .extra{
-    width:53vw;
-   }
-   .logoPart{
-    width: 45vw;
-   }
-   .reserach input{
-    width: 20vw;
-   }
-}
 
-@media screen and (min-width: 350px) and (max-width: 515px) {
-    body{
-        background-color: purple;
-    }
-    .changebtn{
+    .changebtn {
         color: red;
         position: relative;
         bottom: 15px;
-        width: 20px;
     }
-    #shop{
-        font-size: 1rem;
+
+    .extra {
+        width: 53vw;
     }
-    .mainLogo{
-        display: block;
-        width: 50px;
-        height: 50px;
+
+    .logoPart {
+        width: 45vw;
     }
-    .extra{
-        position: absolute;
-        right: 15%;
+
+    .research input {
+        width: 60vw;
+        height: 25px;
+        border-radius: 2px;
+        position: relative;
+        right: 40px;
     }
-    .research input{
+
+    .myButton {
+        position: relative;
+        right: 95px;
+    }
+
+    .serImg {
         display: none;
+    }
+
+    #Navigation {
+        position: absolute;
+        top: 53px;
+        width: 90vw;
+        right: 114px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .nav-icon {
         display: block;
         position: absolute;
-        top: 10px;
-        right: 215px;
+        top: 0px;
+        right: 25px;
         transform: translate(-100%, 60%);
         /* font-size: 1.8rem; */
         cursor: pointer;
         z-index: 3;
         color: #FFDD40;
-      }
+    }
 
-      .nav-menu {
+    .nav-menu {
         display: flex;
         flex-direction: column;
         width: 80%;
@@ -66,9 +66,11 @@
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
-      }
-      .nav-menu.active {
-        background-color: lavenderblush;
+    }
+
+    .nav-menu.active {
+        background-color: rgba(62, 54, 209, 0.53);
+        ;
         min-width: 375px;
         left: 0px;
         opacity: 1;
@@ -77,7 +79,114 @@
         padding-left: 0;
         margin: 0;
         /* margin-top: 5px; */
-      }
+    }
 
+    .research {
+        position: absolute;
+        bottom: 370px;
+    }
 }
 
+@media screen and (min-width: 350px) and (max-width: 515px) {
+    body {
+        background-color: purple;
+    }
+
+    .changebtn {
+        color: red;
+        position: relative;
+        bottom: 15px;
+        width: 20px;
+    }
+
+    #shop {
+        /* font-size: 1rem; */
+        display: none;
+    }
+
+    .mainLogo {
+        display: block;
+        /* display: none; */
+        width: 50px;
+        height: 50px;
+    }
+
+    .myText {
+        width: 50vw;
+        color: purple;
+    }
+
+    .extra {
+        position: absolute;
+        right: 15%;
+    }
+
+    .research input {
+        width: 60vw;
+        height: 25px;
+        border-radius: 2px;
+        position: relative;
+        right: 40px;
+    }
+
+    .myButton {
+        position: relative;
+        right: 95px;
+    }
+
+    #Navigation {
+        position: absolute;
+        top: 53px;
+        width: 90vw;
+        right: 114px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav-icon {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        transform: translate(-100%, 60%);
+        /* font-size: 1.8rem; */
+        cursor: pointer;
+        z-index: 3;
+        color: #FFDD40;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        border-top: 1px solid white;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background-color: rgba(62, 54, 209, 0.53);
+        min-width: 375px;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        padding-left: 0;
+        margin: 0;
+        /* margin-top: 5px; */
+    }
+
+    .research {
+        position: absolute;
+        bottom: 370px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}

@@ -25,7 +25,7 @@ function Register() {
     // console.log(data.name);
     try {
       const response = await axios.post(
-        "https://masterproject.onrender.com/api/user/register",
+        "http://localhost:5000/api/user/register",
         data
       );
 

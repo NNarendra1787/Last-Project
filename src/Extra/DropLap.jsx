@@ -8,16 +8,13 @@ function DropLap() {
       <div className="DropLap">
         <ul className="unlist">
           <li>
-            <Link to="/lenovo">Lenovo</Link>
+            <Link to="/Lenovo" className='ph'>Lenovo</Link>
           </li>
           <li>
-            <Link to="/macbook">Lenovo</Link>
+            <Link to="/Macbook" className='ph'>Macbook</Link>
           </li>
           <li>
-            <Link to="/">Lenovo</Link>
-          </li>
-          <li>
-            <Link to="/lenovo">Lenovo</Link>
+            <Link to="/Dell" className='ph'>Dell</Link>
           </li>
         </ul>
       </div>

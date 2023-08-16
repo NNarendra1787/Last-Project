@@ -1,29 +1,30 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../DataComp/Home.css"
 
-function Store() {
+import "../DataComp/Home.css"
+// import filpcart from "../Img/fill_cart.svg"
+
+function MyLap() {
   const [data, setData] = useState([]);
 
-   useEffect(()=>{
-    const url = "http://localhost:5000/api/user/Acc";
+  useEffect(() => {
+    const url = "http://localhost:5000/api/user/lap";
 
-    axios.get(url).then((resp)=>{
+    axios.get(url).then((resp) => {
       setData(resp.data);
-    })
-
-   },[data])
+    });
+  }, [data]);
   return (
-    <>
-      Store
+    <div>
+      Laptop page
       <section className="RoHome">
       {/* <h2 className="homeTitle">Best Seller</h2> */}
       {/* <hr className="myline" /> */}
       <section className="RomeData">
         <div className="RomeBox">
           {data
-            .filter((e) => e.cat === "Redmi" && e.no === 17)
+            .filter((e) => e.cat === "laptops" && e.no === 1)
             .map((item, ind) => (
               <div key={ind}>
                 <img src={item.image} alt="/" className="homeimg" />
@@ -42,7 +43,7 @@ function Store() {
         </div>
         <div className="RomeBox">
           {data
-            .filter((e) => e.cat === "Keybord" && e.no === 6)
+            .filter((e) => e.cat === "laptops" && e.no === 3)
             .map((item, ind) => (
               <div key={ind}>
                 <img src={item.image} alt="/" className="homeimg" />
@@ -61,7 +62,7 @@ function Store() {
         </div>
         <div className="RomeBox">
           {data
-            .filter((e) => e.cat === "Speaker" && e.no === 1)
+            .filter((e) => e.cat === "laptops" && e.no === 5)
             .map((item, ind) => (
               <div key={ind}>
                 <img src={item.image} alt="/" className="homeimg" />
@@ -80,7 +81,7 @@ function Store() {
         </div>
         <div className="RomeBox">
           {data
-            .filter((e) => e.cat === "headphone" && e.no === 26)
+            .filter((e) => e.cat === "laptops" && e.no === 2)
             .map((item, ind) => (
               <div key={ind}>
                 <img src={item.image} alt="/" className="homeimg" />
@@ -99,26 +100,7 @@ function Store() {
         </div>
         <div className="RomeBox">
           {data
-            .filter((e) => e.cat === "Dell" && e.no === 31)
-            .map((item, ind) => (
-              <div key={ind}>
-                <img src={item.image} alt="/" className="homeimg" />
-                <div className="midCard">
-                <Link to={`/ClickPage/${item.title2}`} state={item}>
-                    <h3 className="homeText">{item.title2}</h3>
-                  </Link>
-                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
-                  <h5 className="notPrice">
-                    Original Price: {item.crossPrice}
-                  </h5>
-                  <h4 className="fa fa-star checked">{item.rating}</h4>
-                </div>
-              </div>
-            ))}
-        </div>
-        <div className="RomeBox">
-          {data
-            .filter((e) => e.cat === "Mouse" && e.no === 8)
+            .filter((e) => e.cat === "laptops" && e.no === 4)
             .map((item, ind) => (
               <div key={ind}>
                 <img src={item.image} alt="/" className="homeimg" />
@@ -138,9 +120,8 @@ function Store() {
         
       </section>
     </section>
-
-    </>
+    </div>
   );
 }
 
-export default Store;
+export default MyLap;

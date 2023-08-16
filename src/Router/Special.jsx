@@ -9,9 +9,9 @@ function Special() {
     <>
     <div className="logRegi">
       <ul>
-        <li><Link to="/register" >Register</Link></li>
-        <li><Link to="/login" >Login</Link></li>
-        <li><Link to="/logout" >Logout</Link></li>
+        <li><Link to="/register"  className='ph'>Register</Link></li>
+        <li><Link to="/login"  className='ph'>Login</Link></li>
+        <li><Link to="/logout"  className='ph'>Logout</Link></li>
       </ul>
     </div>
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
-import mainLogo from "./Img/myImplogo.png";
+// import mainLogo from "./Img/myImplogo.png";
+import mainLogo from "./Img/mainlogo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import cart from "./Img/cart.png";
 // import search from "./Img/search.png";
@@ -10,14 +11,14 @@ import SearchIcon from "./Img/search_icon.svg";
 
 import DropStore from "./Extra/DropStore";
 import DropPh from "./Extra/DropPh";
-import DropPad from "./Extra/DropPad";
+// import DropPad from "./Extra/DropPad";
 import DropLap from "./Extra/DropLap";
-import DropAcc from "./Extra/DropAcc";
+// import DropAcc from "./Extra/DropAcc";
 import { NavLink } from "react-router-dom";
 
 // import "./backup.css";
-import "./Navbar.css"
-import "./responsive.css"
+import "./Navbar.css";
+import "./responsive.css";
 
 function Navbar() {
   const [searchInput, setSearchInput] = useState("");
@@ -30,10 +31,10 @@ function Navbar() {
   const infomation = localStorage.getItem("name");
   // console.log("name aaya",infomation);
   const [storing, setStoring] = useState(false);
-  const [ipad, setIpad] = useState(false);
+  // const [ipad, setIpad] = useState(false);
   const [iphone, setIphone] = useState(false);
   const [laptop, setLaptop] = useState(false);
-  const [accesseries, setAccessires] = useState(false);
+  // const [accesseries, setAccessires] = useState(false);
 
   const [click, setClick] = useState(false);
   const handleClick = () => {
@@ -51,13 +52,14 @@ function Navbar() {
             id="Navigation"
             className={click ? "nav-menu active" : "nav-menu"}
           >
+            
             <button className="btn">
               <NavLink
                 to={"/"}
                 className="links nav-link"
                 onClick={handleClick}
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "firebrick",
+                  color: isActive ? "lime" : "red",
                 })}
               >
                 HOME
@@ -66,18 +68,18 @@ function Navbar() {
             <button
               className="btn"
               onMouseOver={() => {
-                setStoring(true);
+                setStoring((eve) => !eve);
               }}
-              onMouseLeave={() => {
-                setStoring(false);
-              }}
+              // onMouseLeave={() => {
+              //   setStoring(false);
+              // }}
             >
               <NavLink
                 to={"/store"}
                 className="links nav-link"
                 onClick={handleClick}
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "firebrick",
+                  color: isActive ? "lime" : "red",
                 })}
               >
                 STORE
@@ -87,25 +89,25 @@ function Navbar() {
             <button
               className="btn"
               onMouseOver={() => {
-                setIphone(true);
+                setIphone((eve) => !eve);
               }}
-              onMouseLeave={() => {
-                setIphone(false);
-              }}
+              // onMouseLeave={() => {
+              //   setIphone(false);
+              // }}
             >
               <NavLink
                 to={"/iPhone"}
                 className="links nav-link"
                 onClick={handleClick}
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "firebrick",
+                  color: isActive ? "lime" : "red",
                 })}
               >
                 PHONES
               </NavLink>
             </button>
             {iphone && <DropPh />}
-            <button
+            {/* <button
               className="btn"
               onMouseOver={() => {
                 setIpad(true);
@@ -119,35 +121,35 @@ function Navbar() {
                 className="links nav-link"
                 onClick={handleClick}
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "firebrick",
+                  color: isActive ? "lime" : "red",
                 })}
               >
                 IPAD
               </NavLink>
             </button>
-            {ipad && <DropPad />}
+            {ipad && <DropPad />} */}
             <button
               className="btn"
               onMouseOver={() => {
-                setLaptop(true);
+                setLaptop((eve) => !eve);
               }}
-              onMouseLeave={() => {
-                setLaptop(false);
-              }}
+              // onMouseLeave={() => {
+              //   setLaptop(false);
+              // }}
             >
               <NavLink
-                to={"/Macbook"}
+                to={"/lap"}
                 className="links nav-link"
                 onClick={handleClick}
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "firebrick",
+                  color: isActive ? "lime" : "red",
                 })}
               >
                 LAPTOPS
               </NavLink>
             </button>
             {laptop && <DropLap />}
-            <button
+            {/* <button
               className="btn"
               onMouseOver={() => {
                 setAccessires(true);
@@ -161,32 +163,32 @@ function Navbar() {
                 className="links nav-link"
                 onClick={handleClick}
                 style={({ isActive }) => ({
-                  color: isActive ? "greenyellow" : "firebrick",
+                  color: isActive ? "lime" : "red",
                 })}
               >
                 ACCESSERIES
               </NavLink>
             </button>
-            {accesseries && <DropAcc />}
-                <div className="research">
-                  <input
-                    type="text"
-                    name="search"
-                    placeholder="search something"
-                    value={searchInput}
-                    onChange={(e) => {
-                      setSearchInput(e.target.value);
-                    }}
-                  />
-                  <button
-                    className="myButton"
-                    onClick={() => {
-                      setSearchInput((def) => !def);
-                    }}
-                  >
-                    <img src={SearchIcon} alt="/" />
-                  </button>
-                </div>
+            {accesseries && <DropAcc />} */}
+            <div className="research">
+              <input
+                type="text"
+                name="search"
+                placeholder="search something"
+                value={searchInput}
+                onChange={(e) => {
+                  setSearchInput(e.target.value);
+                }}
+              />
+              <button
+                className="myButton"
+                onClick={() => {
+                  setSearchInput((def) => !def);
+                }}
+              >
+                <img src={SearchIcon} alt="/" className="serImg" />
+              </button>
+            </div>
           </div>
           <div className="nav-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}

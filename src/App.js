@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import {} from 'bootstrap'
 // import { useState } from 'react';
 import PageRoutes from './PageRoutes';
+import Footer2 from './DataComp/Footer2';
 // import BackUp from './BackUp';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <PageRoutes />
       {/* <BackUp /> */}
+      <Footer2 />
 
       {/* <Sample /> */}
       {/* <Coursole /> */}

@@ -8,20 +8,22 @@ function DropStore() {
       <div className="DropStore">
         <ul>
           <li>
-            <Link to="/phone">Phones</Link>
+            <Link to="/Laptops" className='ph'>Laptops</Link>
           </li>
           <li>
-            <Link to="/laptop">Laptops</Link>
+            <Link to="/Watch" className='ph'>Watch</Link>
           </li>
           <li>
-            <Link to="/watch">Watch</Link>
+            <Link to="/headphone" className='ph'>HeadPhone</Link>
           </li>
           <li>
-            <Link to="/shoes">Shoes</Link>
+            <Link to="/Keybord" className='ph'>Keybord</Link>
           </li>
           <li>
-            <Link to="/chargers">Chargers</Link>
-
+            <Link to="/Mouse" className='ph'>Mouse</Link>
+          </li>
+          <li>
+            <Link to="/Speaker" className='ph'>Speaker</Link>
           </li>
         </ul>
       </div>

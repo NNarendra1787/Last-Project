@@ -65,9 +65,33 @@
     top: 40px;
     text-align: center;
 }
+.RemidCard{
+    position: relative;
+    top: 10px;
+    text-align: center;
+}
 .itsPrice{
     color: #F44336;
     font-size: 21px;
+}
+.AddToCart{
+  position: relative;
+  top: 45px;
+}
+.ReAddToCart{
+  position: relative;
+  top: 25px;
+}
+.cart{
+  position: relative;
+  /* right: 4rem; */
+  align-items: center;
+  width: 100px;
+  background-color: rgb(54, 54, 233);
+  color: lemonchiffon;
+  /* filter: invert(100%); */
+  border: none;
+  border-radius: 6px;
 }
 .checked {
     color: orange;
@@ -95,9 +119,61 @@
   .ClickPage{
     display: flex;
     justify-content: space-around;
-    width: 80vh;
-    height: 100vh;
+    width: 80vw;
+    height: 80vh;
     margin: 0px auto;
+   
+  }
+
+  .midContents{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 100vh;
+    position: relative;
+    top: 30%;
+    
+  }
+ 
+  .sideImg{
+    position: relative;
+    top: 10%;
+    width: 40vw;
+    height: 70vh;
+  }
+
+  .myButtons{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 0.8rem;
+  }
+  .decrp{
+    font-family: 'Tinos', serif;
+    color: blue;
+    font-size: 1.3rem;
+    text-align: justify;
+  }
+  .CartBtn{
+    height: 35px;
+    background-color: rgb(54, 54, 233);
+    color: lemonchiffon;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border: none;
+    font-weight: bold;
+  }
+  .changebtn{
+    position: relative;
+    bottom: 4px;
+    right: 3rem;
+    color: lemonchiffon;
+    font-weight: bold;
+  }
+  .userImg{
+    color: lemonchiffon;
+    width: 20px;
+    filter: invert(100%);
   }
 
   .footer{

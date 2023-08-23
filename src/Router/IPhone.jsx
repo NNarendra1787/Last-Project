@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import "../DataComp/Home.css"
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { add } from '../RDX/SliceCart';
 
 function IPhone() {
   const [data, setData] = useState([]);
+  const dispatch = useDispatch()
+
+  const navi = useNavigate();
 
   useEffect(()=>{
-    const url = "http://localhost:5000/api/user/mob"
+    const url = "https://king-store.onrender.com/api/user/mob"
 
     axios.get(url).then((resp)=>{
       setData(resp.data);
     })
   },[data])
+
+  const AddToCart=(post)=>{
+    dispatch(add(post))
+  }
   return (
     <> 
       Phones
@@ -23,97 +32,138 @@ function IPhone() {
         <div className="RomeBox">
           {data
             .filter((e) => e.cat === "phone" && e.no === 1)
-            .map((item, ind) => (
-              <div key={ind}>
-                <img src={item.image} alt="/" className="homeimg" />
-                <div className="midCard">
-                  <Link to={`/ClickPage/${item.title2}`} state={item}>
-                    <h3 className="homeText">{item.title2}</h3>
+            .map((post, ind) => {
+              const {image,title2,price,crossPrice,rating} = post
+              return(
+
+                <div key={ind}>
+                <img src={image} alt="/" className="homeimg" />
+                <div className="RemidCard">
+                  <Link to={`/ClickPage/${title2}`} state={post}>
+                    <h3 className="homeText">{title2}</h3>
                   </Link>
-                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
+                  <h4 className="itsPrice">Sale Price: {price}</h4>
                   <h5 className="notPrice">
-                    Original Price: {item.crossPrice}
+                    Original Price: {crossPrice}
                   </h5>
-                  <h4 className="fa fa-star checked">{item.rating}</h4>
+                  <h4 className="fa fa-star checked">{rating}</h4>
+                </div>
+                <div className="ReAddToCart" onClick={()=> navi('/cart')}>
+                  <button className="cart" onClick={()=>AddToCart(post)} >AddToCart</button>
                 </div>
               </div>
-            ))}
+                )
+          }
+            )}
         </div>
         <div className="RomeBox">
           {data
             .filter((e) => e.cat === "phone" && e.no === 3)
-            .map((item, ind) => (
-              <div key={ind}>
-                <img src={item.image} alt="/" className="homeimg" />
-                <div className="midCard">
-                <Link to={`/ClickPage/${item.title2}`} state={item}>
-                    <h3 className="homeText">{item.title2}</h3>
+            .map((post, ind) => {
+
+              const {image,title2,price,crossPrice,rating} = post
+              return(
+                
+                <div key={ind}>
+                <img src={image} alt="/" className="homeimg" />
+                <div className="ReRemidCard">
+                <Link to={`/ClickPage/${title2}`} state={post}>
+                    <h3 className="homeText">{title2}</h3>
                   </Link>
-                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
+                  <h4 className="itsPrice">Sale Price: {price}</h4>
                   <h5 className="notPrice">
-                    Original Price: {item.crossPrice}
+                    Original Price: {crossPrice}
                   </h5>
-                  <h4 className="fa fa-star checked">{item.rating}</h4>
+                  <h4 className="fa fa-star checked">{rating}</h4>
+                </div>
+                <div className="ReAddToCart" onClick={()=> navi('/cart')}>
+                  <button className="cart" onClick={()=>AddToCart(post)} >AddToCart</button>
                 </div>
               </div>
-            ))}
+                )
+              }
+            )}
         </div>
         <div className="RomeBox">
           {data
             .filter((e) => e.cat === "phone" && e.no === 5)
-            .map((item, ind) => (
-              <div key={ind}>
-                <img src={item.image} alt="/" className="homeimg" />
-                <div className="midCard">
-                <Link to={`/ClickPage/${item.title2}`} state={item}>
-                    <h3 className="homeText">{item.title2}</h3>
+            .map((post, ind) => {
+              const {image,title2,price,crossPrice,rating} = post
+              return(
+
+                <div key={ind}>
+                <img src={image} alt="/" className="homeimg" />
+                <div className="ReRemidCard">
+                <Link to={`/ClickPage/${title2}`} state={post}>
+                    <h3 className="homeText">{title2}</h3>
                   </Link>
-                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
+                  <h4 className="itsPrice">Sale Price: {price}</h4>
                   <h5 className="notPrice">
-                    Original Price: {item.crossPrice}
+                    Original Price: {crossPrice}
                   </h5>
-                  <h4 className="fa fa-star checked">{item.rating}</h4>
+                  <h4 className="fa fa-star checked">{rating}</h4>
+                </div>
+                <div className="ReAddToCart" onClick={()=> navi('/cart')}>
+                  <button className="cart" onClick={()=>AddToCart(post)} >AddToCart</button>
                 </div>
               </div>
-            ))}
+                )
+              }
+            )}
         </div>
         <div className="RomeBox">
           {data
             .filter((e) => e.cat === "phone" && e.no === 2)
-            .map((item, ind) => (
-              <div key={ind}>
-                <img src={item.image} alt="/" className="homeimg" />
-                <div className="midCard">
-                <Link to={`/ClickPage/${item.title2}`} state={item}>
-                    <h3 className="homeText">{item.title2}</h3>
+            .map((post, ind) => {
+              const {image,title2,price,crossPrice,rating} = post
+              return(
+
+                <div key={ind}>
+                <img src={image} alt="/" className="homeimg" />
+                <div className="RemidCard">
+                <Link to={`/ClickPage/${title2}`} state={post}>
+                    <h3 className="homeText">{title2}</h3>
                   </Link>
-                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
+                  <h4 className="itsPrice">Sale Price: {price}</h4>
                   <h5 className="notPrice">
-                    Original Price: {item.crossPrice}
+                    Original Price: {crossPrice}
                   </h5>
-                  <h4 className="fa fa-star checked">{item.rating}</h4>
+                  <h4 className="fa fa-star checked">{rating}</h4>
+                </div>
+                <div className="ReAddToCart" onClick={()=> navi('/cart')}>
+                  <button className="cart" onClick={()=>AddToCart(post)} >AddToCart</button>
                 </div>
               </div>
-            ))}
+                )
+              }
+            )}
         </div>
         <div className="RomeBox">
           {data
             .filter((e) => e.cat === "phone" && e.no === 4)
-            .map((item, ind) => (
-              <div key={ind}>
-                <img src={item.image} alt="/" className="homeimg" />
-                <div className="midCard">
-                <Link to={`/ClickPage/${item.title2}`} state={item}>
-                    <h3 className="homeText">{item.title2}</h3>
+            .map((post, ind) => {
+              const {image,title2,price,crossPrice,rating} = post
+
+              return(
+                <div key={ind}>
+                <img src={image} alt="/" className="homeimg" />
+                <div className="RemidCard">
+                <Link to={`/ClickPage/${title2}`} state={post}>
+                    <h3 className="homeText">{title2}</h3>
                   </Link>
-                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
+                  <h4 className="itsPrice">Sale Price: {price}</h4>
                   <h5 className="notPrice">
-                    Original Price: {item.crossPrice}
+                    Original Price: {crossPrice}
                   </h5>
-                  <h4 className="fa fa-star checked">{item.rating}</h4>
+                  <h4 className="fa fa-star checked">{rating}</h4>
+                </div>
+                <div className="ReAddToCart" onClick={()=> navi('/cart')}>
+                  <button className="cart" onClick={()=>AddToCart(post)} >AddToCart</button>
                 </div>
               </div>
-            ))}
+              )
+              } 
+            )}
         </div>
         
       </section>

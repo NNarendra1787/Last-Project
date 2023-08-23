@@ -7,7 +7,7 @@ function HomData() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const url = "http://localhost:5000/api/user/total";
+    const url = "https://king-store.onrender.com/api/user/total";
 
     axios.get(url).then((resp) => {
       setData(resp.data);
@@ -35,6 +35,9 @@ function HomData() {
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
                 </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
+                </div>
               </div>
             ))}
         </div>
@@ -53,6 +56,9 @@ function HomData() {
                     Original Price: {item.crossPrice}
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
+                </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
                 </div>
               </div>
             ))}
@@ -73,6 +79,9 @@ function HomData() {
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
                 </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
+                </div>
               </div>
             ))}
         </div>
@@ -91,6 +100,9 @@ function HomData() {
                     Original Price: {item.crossPrice}
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
+                </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
                 </div>
               </div>
             ))}
@@ -111,6 +123,9 @@ function HomData() {
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
                 </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
+                </div>
               </div>
             ))}
         </div>
@@ -129,6 +144,9 @@ function HomData() {
                     Original Price: {item.crossPrice}
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
+                </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
                 </div>
               </div>
             ))}
@@ -149,6 +167,9 @@ function HomData() {
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
                 </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
+                </div>
               </div>
             ))}
         </div>
@@ -159,14 +180,17 @@ function HomData() {
               <div key={ind}>
                 <img src={item.image} alt="/" className="homeimg" />
                 <div className="midCard">
-                  <h3 className="homeText">{item.title2}</h3>
                   <Link to={`/ClickPage/${item.title2}`} state={item}>
                     <h3 className="homeText">{item.title2}</h3>
                   </Link>
+                  <h4 className="itsPrice">Sale Price: {item.price}</h4>
                   <h5 className="notPrice">
                     Original Price: {item.crossPrice}
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
+                </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
                 </div>
               </div>
             ))}
@@ -187,6 +211,9 @@ function HomData() {
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
                 </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
+                </div>
               </div>
             ))}
         </div>
@@ -205,6 +232,9 @@ function HomData() {
                     Original Price: {item.crossPrice}
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
+                </div>
+                <div className="AddToCart">
+                  <button className="cart">AddToCart</button>
                 </div>
               </div>
             ))}

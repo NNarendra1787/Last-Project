@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { useNavigate } from "react-router-dom";
 // import mainLogo from "./Img/myImplogo.png";
 import mainLogo from "./Img/mainlogo.png";
@@ -27,9 +27,16 @@ function Navbar() {
   const [logregi, setLogRegi] = useState(false);
 
   // const navi = useNavigate();
+  const [name, setName] = useState(false) 
+  const local = localStorage.getItem("name")
+  useEffect(()=>{
+    const infomation = localStorage.getItem("name");
+    console.log("name aaya",infomation);
+    setName(infomation)
+    console.log("name:",name);
+  },[ local,name])
 
-  const infomation = localStorage.getItem("name");
-  // console.log("name aaya",infomation);
+
   const [storing, setStoring] = useState(false);
   // const [ipad, setIpad] = useState(false);
   const [iphone, setIphone] = useState(false);
@@ -86,6 +93,8 @@ function Navbar() {
               </NavLink>
             </button>
             {storing && <DropStore />}
+
+            
             <button
               className="btn"
               onMouseOver={() => {
@@ -195,7 +204,7 @@ function Navbar() {
           </div>
           <section className="extra">
             <div>
-              <img src={cart} alt="cart" className="cart" />
+              <img src={cart} alt="cart" className="cartIcon" />
             </div>
             <button
               className="btn changebtn"
@@ -203,9 +212,9 @@ function Navbar() {
                 setLogRegi((prev) => !prev);
               }}
             >
-              {infomation !== <img src={Userlogo} alt="/" />
-                ? `Hi ${infomation}`
-                : "Hi User"}
+              {name  
+                ? `Hi ${name}`
+                :<img src={Userlogo} alt="/"  className="userImg"/>}
             </button>
             {logregi && <Special />}
           </section>

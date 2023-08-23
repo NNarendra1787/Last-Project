@@ -21,14 +21,16 @@ function Register() {
 
   async function submit(e) {
     e.preventDefault();
-    // console.log(data);
+    console.log("This is console");
     // console.log(data.name);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/register",
+        "https://king-store.onrender.com/api/user/register",
         data
       );
 
+      console.log("inside log", response.data)
+      console.log("repsn", response.data.name);
       setData({
         name: "",
         email: "",
@@ -37,6 +39,7 @@ function Register() {
       });
 
       localStorage.setItem("token", response.data.token);
+      
       localStorage.setItem("name", response.data.name);
       // console.log(response.data);
     } catch (err) {
@@ -99,7 +102,7 @@ function Register() {
 
           <button id="submit" onClick={submit}>
              <p onClick={()=>{
-              navigate("/login")
+              navigate("/")
             }}>Submit</p>
           </button>
         </form>

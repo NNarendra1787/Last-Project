@@ -5,7 +5,7 @@ import RStore from './RStore'
 
 function RootLayout() {
   return (
-    <div>RootLayout
+    <div>
         <Provider store={RStore}>
             <main>
                 <Outlet />

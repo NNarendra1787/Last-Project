@@ -12,7 +12,16 @@ const SliceCart = createSlice({
         remove(state, action){
             return state.filter(item=>item.no !== action.payload)
             // return state.filter((item)=> item>item.no !== action.payload)
-        }
+        },
+
+        // increment(state, action){
+        //     return price + price;
+        // },
+
+        // decrement(){
+        //     return price-price;
+
+        // }
     }
 
 })

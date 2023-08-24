@@ -1,12 +1,10 @@
-@media screen and (min-width: 515px) and (max-width: 660px) {
+@media screen and (min-width: 515px) and (max-width: 760px) {
     body {
         background-color: pink;
     }
 
-    .changebtn {
-        color: red;
-        position: relative;
-        bottom: 15px;
+    #infoBtn{
+        width: 10px;
     }
 
     .extra {
@@ -85,12 +83,18 @@
         position: absolute;
         bottom: 370px;
     }
+
+    .cartIcon{
+        position: absolute;
+    bottom: 10px;
+    }
 }
 
 @media screen and (min-width: 350px) and (max-width: 515px) {
     body {
         background-color: purple;
     }
+
 
     .changebtn {
         color: red;
@@ -127,6 +131,7 @@
         border-radius: 2px;
         position: relative;
         right: 40px;
+        /* bottom: 115px; */
     }
 
     .myButton {
@@ -182,11 +187,95 @@
 
     .research {
         position: absolute;
-        bottom: 370px;
+        /* bottom: 370px; */
     }
 
     .container {
         width: 90%;
     }
 
+}
+
+@media screen and (min-width: 401px) and (max-width: 500px) {
+    body {
+        background-color: purple;
+    }
+
+    .MainNav {
+        width: 113vw;
+    }
+
+    .midNav {
+        width: 100%;
+    }
+
+    .container {
+        width: 110%;
+    }
+
+    .HoHome {
+        width: 110vw;
+    }
+
+    .HVid {
+        width: 100vw;
+    }
+
+    .Advertisement {
+        width: 100vw;
+    }
+
+    .homeBox {
+        width: 350px;
+    }
+
+    .footer {
+        width: 100vw;
+    }
+
+    .nav-icon {
+        position: relative;
+        left: 0%;
+        top: -22%;
+    }
+
+    .changebtn {
+        position: relative;
+        left: 40%;
+    }
+
+    .cartIcon {
+
+        position: absolute;
+        left: 142%;
+        bottom: 9px;
+
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1070px){
+    body{
+        background-color: green;
+    }
+    #Navigation{
+        width: 14vw;
+    }
+    .midNav{
+        width: 97vw;
+    }
+    .logoPart{
+        width: 13%;
+    }
+    #shop{
+        font-size: 100%;
+    }
+    #infoBtn{
+        position: relative;
+        left: 0px;
+    }
+    .cartIcon{
+        position: relative;
+        left: -10px;
+    }
+    
 }

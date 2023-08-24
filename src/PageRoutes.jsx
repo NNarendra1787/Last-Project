@@ -14,6 +14,7 @@ import MyLap from "./Router/MyLap";
 import RCarts from "./RDX/RCarts";
 import King from "./King";
 import RootLayout from "./RDX/RootLayout";
+import Navbar from "./Navbar";
 
 function PageRoutes() {
   return (
@@ -33,6 +34,7 @@ function PageRoutes() {
           <Route path="/:category" element={<LinkPage />} />
           <Route path="/king" element={<King />} />
           <Route path="/Cart" element={<RCarts />} />
+          <Route  path="/" element={<Navbar />}/>
         </Route>
       </Routes>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css";
+import "../responsive.css"
 import ad from "../Img/ad.jpg"
 
 

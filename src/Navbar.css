@@ -1,3 +1,7 @@
+.MainHome{
+  width: 100%;
+}
+
 #Navigation{
     display: flex;
     /* flex-direction: column; */
@@ -64,7 +68,7 @@
   .research input{
     border-radius: 7px;
     border: none;
-    width: 310px;
+    width: 20vw;
     height: 20px;
   }
   

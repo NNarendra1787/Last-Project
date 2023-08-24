@@ -1,21 +1,24 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Home.css";
-import { useDispatch } from "react-redux";
+import { useDispatch} from "react-redux";
 import { add } from "../RDX/SliceCart";
 
 function ClickPage() {
   const locate = useLocation().state;
+  // const select = useSelector((state)=> state.Cart)
   const dispatch = useDispatch();
   const nav = useNavigate();
   const AddToCart = (post)=>{
     dispatch(add(post))
   }
   // const {title,image,price,crossPrice,rating} = post
+
+  
+  const data = "sting"
   return (
     <div>
-      
-      <section className="ClickPage">
+      <section className="ClickPage" key={data}>
         <img src={locate.image} alt="/" className="sideImg" />
         <div className="midContents">
 
@@ -25,9 +28,9 @@ function ClickPage() {
           <h5 className="notPrice">Original Price: {locate.crossPrice}</h5>
           <h4 className="fa fa-star checked">{locate.rating}</h4>
         </div>
-        <div className="myButtons">
-          <button className="CartBtn" onClick={()=> nav('/cart')}>Add to Cart</button>
-          <button className="CartBtn" onClick={()=> AddToCart()}>Buy Now</button>
+        <div className="myButtons" onClick={()=> nav('/cart')} >
+          <button className="CartBtn" onClick={()=> AddToCart(locate)}>Add to Cart</button>
+          <button className="CartBtn" >Buy Now</button>
         </div>
         </div>
       </section>

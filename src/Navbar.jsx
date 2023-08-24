@@ -14,7 +14,9 @@ import DropPh from "./Extra/DropPh";
 // import DropPad from "./Extra/DropPad";
 import DropLap from "./Extra/DropLap";
 // import DropAcc from "./Extra/DropAcc";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
+// import { useSelector } from "react-redux"
 
 // import "./backup.css";
 import "./Navbar.css";
@@ -22,11 +24,13 @@ import "./responsive.css";
 
 function Navbar() {
   const [searchInput, setSearchInput] = useState("");
+
+  // const cartProduct = useSelector(state=> state.cart)
   // const [search, setSearch] = useState(false);
 
   const [logregi, setLogRegi] = useState(false);
 
-  // const navi = useNavigate();
+  const navi = useNavigate();
   const [name, setName] = useState(false) 
   const local = localStorage.getItem("name")
   useEffect(()=>{
@@ -203,11 +207,11 @@ function Navbar() {
             {click ? <FaTimes /> : <FaBars />}
           </div>
           <section className="extra">
-            <div>
+            <div onClick={()=> navi('/cart')} >
               <img src={cart} alt="cart" className="cartIcon" />
             </div>
             <button
-              className="btn changebtn"
+              className="btn changebtn" id="infoBtn"
               onClick={() => {
                 setLogRegi((prev) => !prev);
               }}

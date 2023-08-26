@@ -4,8 +4,9 @@ import Coursole from '../Courso/Coursole'
 // import Navbar from '../Navbar'
 // import Navbar2 from '../Navbar2'
 import "../responsive.css"
-import HomData from '../DataComp/HomData'
+// import HomData from '../DataComp/HomData'
 import HomeVid from '../DataComp/HomeVid'
+import NData from '../DataComp/NData'
 
 function Home() {
   return (
@@ -13,7 +14,8 @@ function Home() {
       {/* <Navbar2 /> */}
       {/* <Navbar /> */}
       <Coursole />
-      <HomData />
+      {/* <HomData /> */}
+      <NData />
       <HomeVid />
     </div>
   )

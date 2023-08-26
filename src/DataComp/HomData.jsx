@@ -2,10 +2,25 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../responsive.css"
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../RD/cartAction";
 
-function HomData() {
+function HomData({product}) {
   const [data, setData] = useState([]);
+
+  // const {title2,image, price,crossPrice,rating} = product
+  const dispatch = useDispatch();
+  const selector = useSelector((state)=> state.cart.cartItems)
+  const navi = useNavigate()
+
+  const handalAddToCart = (product)=>{
+    dispatch(addToCart(product))
+  }
+
+  const handalRemoveFromCart = (productId)=>{
+    dispatch(removeFromCart(productId))
+  }
 
   useEffect(() => {
     const url = "https://king-store.onrender.com/api/user/total";
@@ -36,8 +51,8 @@ function HomData() {
                   </h5>
                   <h4 className="fa fa-star checked">{item.rating}</h4>
                 </div>
-                <div className="AddToCart">
-                  <button className="cart">AddToCart</button>
+                <div className="AddToCart" onClick={()=> navi('/NCart')}>
+                  <button className="cart" onAddToCart={handalAddToCart}>AddToCart</button>
                 </div>
               </div>
             ))}

@@ -9,3 +9,22 @@
     padding: 10px;
     /* height: 10%; */
 }
+.incBtn{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid red;
+    height: 30px;
+    width: 100px;
+    align-items: center;
+    border-radius: 23px;
+}
+.cbtn{
+    width: 30px;
+    height: 20px;
+    border-radius: 8px;
+    background-color: lightblue;
+}
+.cou{
+    position: relative;
+    top: 10px;
+}

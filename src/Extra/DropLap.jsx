@@ -11,10 +11,10 @@ function DropLap() {
             <Link to="/Lenovo" className='ph'>Lenovo</Link>
           </li>
           <li>
-            <Link to="/Macbook" className='ph'>Macbook</Link>
+            <Link to="/Macbook" className='ph' >Macbook</Link>
           </li>
           <li>
-            <Link to="/Dell" className='ph'>Dell</Link>
+            <Link to="/Dell" className='ph' >Dell</Link>
           </li>
         </ul>
       </div>

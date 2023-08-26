@@ -41,7 +41,15 @@ function Navbar() {
   },[ local,name])
 
 
-  const [storing, setStoring] = useState(false);
+  const [isdropdown, setisdropdown] = useState(false);
+
+  const handelDropDownOpne = ()=>{
+    setisdropdown(true)
+  }
+  const handelDropDownClose = ()=>{
+    setisdropdown(false)
+  }
+
   // const [ipad, setIpad] = useState(false);
   const [iphone, setIphone] = useState(false);
   const [laptop, setLaptop] = useState(false);
@@ -76,7 +84,7 @@ function Navbar() {
                 HOME
               </NavLink>
             </button>
-            <button
+            {/* <button
               className="btn"
               onMouseOver={() => {
                 setStoring((eve) => !eve);
@@ -84,7 +92,8 @@ function Navbar() {
               // onMouseLeave={() => {
               //   setStoring(false);
               // }}
-            >
+            > */}
+
               <NavLink
                 to={"/store"}
                 className="links nav-link"
@@ -93,21 +102,19 @@ function Navbar() {
                   color: isActive ? "lime" : "red",
                 })}
               >
+                <div onMouseEnter={handelDropDownOpne} onMouseLeave={handelDropDownClose} className="drop-down-dad">
                 STORE
+                {isdropdown && (
+                  <div className="drop-down-child">
+                    <DropStore />
+                  </div>
+                )}
+                </div>
               </NavLink>
-            </button>
-            {storing && <DropStore />}
+            {/* </button>
+            {storing && <DropStore />} */}
 
             
-            <button
-              className="btn"
-              onMouseOver={() => {
-                setIphone((eve) => !eve);
-              }}
-              // onMouseLeave={() => {
-              //   setIphone(false);
-              // }}
-            >
               <NavLink
                 to={"/iPhone"}
                 className="links nav-link"
@@ -116,10 +123,17 @@ function Navbar() {
                   color: isActive ? "lime" : "red",
                 })}
               >
+                <div onMouseEnter={()=>{setIphone(true)}} onMouseLeave={()=>{setIphone(false)}} className="drop-down-dad">
                 PHONES
+                {iphone && (
+                  <div className="drop-down-child">
+                    <DropPh />
+                  </div>
+                )}
+                </div>
               </NavLink>
-            </button>
-            {iphone && <DropPh />}
+            
+            {/* {iphone && <DropPh />} */}
             {/* <button
               className="btn"
               onMouseOver={() => {
@@ -141,7 +155,7 @@ function Navbar() {
               </NavLink>
             </button>
             {ipad && <DropPad />} */}
-            <button
+            {/* <button
               className="btn"
               onMouseOver={() => {
                 setLaptop((eve) => !eve);
@@ -149,7 +163,7 @@ function Navbar() {
               // onMouseLeave={() => {
               //   setLaptop(false);
               // }}
-            >
+            > */}
               <NavLink
                 to={"/lap"}
                 className="links nav-link"
@@ -158,10 +172,17 @@ function Navbar() {
                   color: isActive ? "lime" : "red",
                 })}
               >
+                <div onMouseEnter={()=>{setLaptop(true)}} onMouseLeave={()=>{setLaptop(false)}} className="drop-down-dad">
                 LAPTOPS
+                {laptop && (
+                  <div className="drop-down-child-lap">
+                   <DropLap />
+                  </div>
+                )}
+                </div>
               </NavLink>
-            </button>
-            {laptop && <DropLap />}
+            {/* </button> */}
+            {/* {laptop && } */}
             {/* <button
               className="btn"
               onMouseOver={() => {
@@ -207,20 +228,28 @@ function Navbar() {
             {click ? <FaTimes /> : <FaBars />}
           </div>
           <section className="extra">
-            <div onClick={()=> navi('/cart')} >
+            <div onClick={()=> navi('/NCart')} >
               <img src={cart} alt="cart" className="cartIcon" />
             </div>
             <button
               className="btn changebtn" id="infoBtn"
-              onClick={() => {
-                setLogRegi((prev) => !prev);
-              }}
+              // onMouseEnter={() => {
+              //   setLogRegi(true);
+              // }}
             >
+              <div onMouseEnter={()=>{setLogRegi(true)}} onMouseLeave={()=>{setLogRegi(false)}} className="drop-down-dad-log">
               {name  
                 ? `Hi ${name}`
                 :<img src={Userlogo} alt="/"  className="userImg"/>}
+                {logregi && (
+                  <div className="drop-down-child-log">
+                   <Special />
+                  </div>
+                )}
+                </div>
+              
             </button>
-            {logregi && <Special />}
+            {/* {logregi && } */}
           </section>
         </div>
       </section>

@@ -2,16 +2,22 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Home.css";
 import { useDispatch} from "react-redux";
-import { add } from "../RDX/SliceCart";
+import { addToCart } from "../RD/cartAction";
 
 function ClickPage() {
   const locate = useLocation().state;
   // const select = useSelector((state)=> state.Cart)
   const dispatch = useDispatch();
   const nav = useNavigate();
-  const AddToCart = (post)=>{
-    dispatch(add(post))
+
+  const handleAddToCart = (product)=>{
+    dispatch(addToCart(product))
   }
+
+  // const handleRemoveFromCart = (productId)=>{
+  //   dispatch(removeFromCart(productId))
+  // }
+ 
   // const {title,image,price,crossPrice,rating} = post
 
   
@@ -28,8 +34,8 @@ function ClickPage() {
           <h5 className="notPrice">Original Price: {locate.crossPrice}</h5>
           <h4 className="fa fa-star checked">{locate.rating}</h4>
         </div>
-        <div className="myButtons" onClick={()=> nav('/cart')} >
-          <button className="CartBtn" onClick={()=> AddToCart(locate)}>Add to Cart</button>
+        <div className="myButtons" >
+          <button className="CartBtn" onClick={()=> handleAddToCart(locate)}>Add to Cart</button>
           <button className="CartBtn" >Buy Now</button>
         </div>
         </div>

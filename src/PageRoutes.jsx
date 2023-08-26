@@ -13,14 +13,15 @@ import LinkPage from "./DataComp/LinkPage";
 import MyLap from "./Router/MyLap";
 import RCarts from "./RDX/RCarts";
 import King from "./King";
-import RootLayout from "./RDX/RootLayout";
+// import RootLayout from "./RDX/RootLayout";
 import Navbar from "./Navbar";
+import NCart from "./RD/NCart";
 
 function PageRoutes() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<RootLayout />}>
+        {/* <Route path="/" element={<RootLayout />}> */}
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<Store />} />
           <Route path="/iPhone" element={<IPhone />} />
@@ -31,11 +32,12 @@ function PageRoutes() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<LoginData />} />
           <Route path="/ClickPage/:id" element={<ClickPage />} />
-          <Route path="/:category" element={<LinkPage />} />
+          <Route path="/:cat" element={<LinkPage />} />
           <Route path="/king" element={<King />} />
           <Route path="/Cart" element={<RCarts />} />
+          <Route path="/NCart" element={<NCart />} />
           <Route  path="/" element={<Navbar />}/>
-        </Route>
+        {/* </Route> */}
       </Routes>
     </div>
   );

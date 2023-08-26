@@ -15,7 +15,7 @@ const SliceCart = createSlice({
         },
 
         // increment(state, action){
-        //     return price + price;
+        //     return state+ action.payload;
         // },
 
         // decrement(){
@@ -26,5 +26,5 @@ const SliceCart = createSlice({
 
 })
 
-export const {add, remove} = SliceCart.actions;
+export const {add, remove, increment} = SliceCart.actions;
 export default SliceCart.reducer

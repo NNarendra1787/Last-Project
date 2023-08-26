@@ -1,15 +1,24 @@
-import React from "react";
-import "./RCartP.css"
+import React, { useState } from "react";
+import "./RCartP.css";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "./SliceCart";
 
 const RCarts = () => {
-  // const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+  // const [got, setGot] = useState(false);
   const cartProducts = useSelector((state) => state.Cart);
   const dispatch = useDispatch();
   const removeFromCart = (no) => {
     dispatch(remove(no));
   };
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  // const priceInc = ()=>{
+  //   dispatch(increment(price))
+  // }
 
   const cards = cartProducts.map((post) => {
     const { title, image, price, crossPrice, rating } = post;
@@ -17,7 +26,21 @@ const RCarts = () => {
       <>
         <div className="CartPage">
           <div>
-          <img src={image} height={200} width={200} alt="/" />
+            <img src={image} height={200} width={200} alt="/" />
+            <div className="incBtn">
+              <button
+                onClick={() => {
+                  setCount(count - 1);
+                }}
+                className="cbtn"
+              >
+                -
+              </button>
+              <p className="cou">{count}</p>
+              <button onClick={increment} className="cbtn">
+                +
+              </button>
+            </div>
           </div>
           <div className="CartContent">
             <h3>{title}</h3>
@@ -32,10 +55,9 @@ const RCarts = () => {
   });
 
   return (
-    <div>
-      {/* if({count > 1}){ */}
-        <div>{cards}</div>
-      {/* } */}
+    <div>{
+       {cards}?<div>{cards}</div>:<div>ok</div>
+      }
     </div>
   );
 };

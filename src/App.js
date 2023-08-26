@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <PageRoutes />
       {/* <BackUp /> */}
-      <Footer2 />
+      {/* <Footer2 /> */}
 
       {/* <Sample /> */}
       {/* <Coursole /> */}

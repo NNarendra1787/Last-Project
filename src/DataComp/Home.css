@@ -1,88 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Fira+Sans&family=Lora&family=Manrope&family=Source+Code+Pro:wght@300&family=Tinos:ital@1&display=swap');
-.homeData{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    /* border: 3px solid purple; */
-    margin: 0px auto;
-    width: 75vw;
-    font-family: 'Tinos', serif;
-    gap: 1.5rem;
+
+.homeData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 3px solid purple; */
+  margin: 0px auto;
+  width: 75vw;
+  font-family: 'Tinos', serif;
+  gap: 1.5rem;
 }
-.RomeData{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    /* border: 3px solid purple; */
-    margin: 0px auto;
-    width: 60vw;
-    font-family: 'Tinos', serif;
-    gap: 1.5rem;
+
+.RomeData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 3px solid purple; */
+  margin: 0px auto;
+  width: 60vw;
+  font-family: 'Tinos', serif;
+  gap: 1.5rem;
 }
-.homeTitle{
-    color: red;
-    font-family: 'Tinos', serif;
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px auto;
+  width: 70vw;
+  font-family: 'Tinos', serif;
+  gap: 1.5rem;
 }
-.myline{
-    background-color: rebeccapurple;
+
+omeData {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px auto;
+  width: 60vw;
+  font-family: 'Tinos', serif;
+  gap: 1.5rem;
 }
-.homeBox{
-    /* border: 1px solid red; */
-    width: 250px;
-    height: 350px;
-    border-radius: 12px;
-    /* padding: 3px 12px; */
-    box-shadow: 6px 7px 6px 3px gray;
-    box-sizing: border-box;
+
+.homeTitle {
+  color: red;
+  font-family: 'Tinos', serif;
 }
-.RomeBox{
-    /* border: 1px solid red; */
-    width: 250px;
-    height: 330px;
-    border-radius: 12px;
-    /* padding: 3px 12px; */
-    box-shadow: 6px 7px 6px 3px gray;
-    box-sizing: border-box;
+
+.myline {
+  background-color: rebeccapurple;
 }
-.homeimg{
-    height: 130px;
-    width: 150px;
+
+.homeBox {
+  /* border: 1px solid red; */
+  width: 250px;
+  height: 350px;
+  border-radius: 12px;
+  /* padding: 3px 12px; */
+  box-shadow: 6px 7px 6px 3px gray;
+  box-sizing: border-box;
 }
-.homeimg:hover{
-    transform: rotateY(180deg);
+
+.RomeBox {
+  /* border: 1px solid red; */
+  width: 250px;
+  height: 330px;
+  border-radius: 12px;
+  /* padding: 3px 12px; */
+  box-shadow: 6px 7px 6px 3px gray;
+  box-sizing: border-box;
 }
-.homeText{
-    font-size: 1.3rem;
+
+.homeimg {
+  height: 130px;
+  width: 150px;
 }
-.notPrice{
-    color: dimgray;
-    text-decoration: line-through;
+
+.homeimg:hover {
+  transform: rotateY(180deg);
 }
-.midCard{
-    position: relative;
-    top: 40px;
-    text-align: center;
+
+.homeText {
+  font-size: 1.3rem;
 }
-.RemidCard{
-    position: relative;
-    top: 10px;
-    text-align: center;
+
+.notPrice {
+  color: dimgray;
+  text-decoration: line-through;
 }
-.itsPrice{
-    color: #F44336;
-    font-size: 21px;
+
+.midCard {
+  position: relative;
+  top: 40px;
+  text-align: center;
 }
-.AddToCart{
+
+.RemidCard {
+  position: relative;
+  top: 10px;
+  text-align: center;
+}
+
+.itsPrice {
+  color: #F44336;
+  font-size: 21px;
+}
+
+.AddToCart {
   position: relative;
   top: 45px;
 }
-.ReAddToCart{
+
+.ReAddToCart {
   position: relative;
   top: 25px;
 }
-.cart{
+
+.cart {
   position: relative;
   /* right: 4rem; */
   align-items: center;
@@ -93,94 +131,103 @@
   border: none;
   border-radius: 6px;
 }
+
 .checked {
-    color: orange;
-    font-size: 20px;
-  }
-  .HoHome{
-    position: relative;
-    bottom: 100px;
-  }
-  .RoHome{
-    position: relative;
-    top: 10px;
-  }
+  color: orange;
+  font-size: 20px;
+}
 
-  .HVid{
-    position: relative;
-    bottom: 40px;
-  }
-  
-  .Advertisement{
-    height: 70vh;
-    width: 89vw;
-    border-radius: 12px;
-  }
-  .ClickPage{
-    display: flex;
-    justify-content: space-around;
-    width: 80vw;
-    height: 80vh;
-    margin: 0px auto;
-   
-  }
+.HoHome {
+  position: relative;
+  bottom: 100px;
+}
 
-  .midContents{
-    display: flex;
-    flex-direction: column;
-    width: 35vw;
-    height: 100vh;
-    position: relative;
-    top: 30%;
-    
-  }
- 
-  .sideImg{
-    position: relative;
-    top: 10%;
-    width: 40vw;
-    height: 70vh;
-  }
+.RoHome {
+  position: relative;
+  top: 10px;
+}
 
-  .myButtons{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 0.8rem;
-  }
-  .decrp{
-    font-family: 'Tinos', serif;
-    color: blue;
-    font-size: 1.3rem;
-    text-align: justify;
-  }
-  .CartBtn{
-    height: 35px;
-    background-color: rgb(54, 54, 233);
-    color: lemonchiffon;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border: none;
-    font-weight: bold;
-  }
-  .changebtn{
-    position: relative;
-    bottom: 4px;
-    right: 3rem;
-    color: lemonchiffon;
-    font-weight: bold;
-  }
-  .userImg{
-    color: lemonchiffon;
-    width: 20px;
-    filter: invert(100%);
-  }
+.oHome {
+  position: relative;
+  top: 10px;
+}
 
-  .footer{
-    position: relative;
-    top: 40px;
-  }
+.HVid {
+  position: relative;
+  bottom: 40px;
+}
 
+.Advertisement {
+  height: 70vh;
+  width: 89vw;
+  border-radius: 12px;
+}
 
+.ClickPage {
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+  height: 80vh;
+  margin: 0px auto;
 
- 
+}
+
+.midContents {
+  display: flex;
+  flex-direction: column;
+  width: 35vw;
+  height: 100vh;
+  position: relative;
+  top: 30%;
+
+}
+
+.sideImg {
+  position: relative;
+  top: 10%;
+  width: 40vw;
+  height: 70vh;
+}
+
+.myButtons {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 0.8rem;
+}
+
+.decrp {
+  font-family: 'Tinos', serif;
+  color: blue;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.CartBtn {
+  height: 35px;
+  background-color: rgb(54, 54, 233);
+  color: lemonchiffon;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border: none;
+  font-weight: bold;
+}
+
+.changebtn {
+  position: relative;
+  bottom: 4px;
+  right: 3rem;
+  color: lemonchiffon;
+  font-weight: bold;
+}
+
+.userImg {
+  color: lemonchiffon;
+  width: 20px;
+  filter: invert(100%);
+}
+
+.footer {
+  position: relative;
+  top: 40px;
+}
